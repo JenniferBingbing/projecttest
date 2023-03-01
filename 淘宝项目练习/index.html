@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝搜索页面练习</title>
+    <link rel="stylesheet" href="./css/search.css">
+    <script src="./lib/template-web.js"></script>
+
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/search.js"></script>
+    
+
+</head>
+<body>
+    <div class="main">
+        <img src="./img/taobao_logo.png" alt="">
+        <!-- <div class="search"> -->
+            <div class="search-top">
+                <span>宝贝</span>
+                <span>店铺</span>
+            </div>
+            <div class="search-input">
+                <input type="search" placeholder="请输入要搜索的内容" id="search-input">
+                <button>搜索</button>
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <!-- 定义搜索列表 -->
+    <div class="showlist">
+        <!-- <div class="show">adida</div> -->
+    </div>
+
+    <!-- 定义模板列表 -->
+    <script type="text/html" id="tpl-showlist">
+        <!-- 注意，此处必须为result，因为服务器返回的res值定义为result值 -->
+        {{each result}}
+        <div class="show">{{$value[0]}}</div>
+        {{/each}}
+
+    </script>
+</body>
+</html>
